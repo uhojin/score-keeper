@@ -2,7 +2,6 @@ package sheridan.youho.assignment2.ui.scorekeeper
 
 import android.os.Bundle
 import android.view.*
-import android.widget.ArrayAdapter
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -42,20 +41,20 @@ class ScoreKeeperFragment : Fragment(), MenuProvider {
 
         // A Team Score Buttons
         binding.scoreAAdd1.setOnClickListener {
-            viewModel.addScore(true, 1)
+            viewModel.addScore(0, 1)
             mainViewModel.saveScoreData(viewModel.scoreData)
         }
         binding.scoreAAdd2.setOnClickListener {
-            viewModel.addScore(true, 2)
+            viewModel.addScore(0, 2)
             mainViewModel.saveScoreData(viewModel.scoreData)
         }
         // B Team Score Buttons
         binding.scoreBAdd1.setOnClickListener {
-            viewModel.addScore(false, 1)
+            viewModel.addScore(1, 1)
             mainViewModel.saveScoreData(viewModel.scoreData)
         }
         binding.scoreBAdd2.setOnClickListener {
-            viewModel.addScore(false, 2)
+            viewModel.addScore(1, 2)
             mainViewModel.saveScoreData(viewModel.scoreData)
         }
 
@@ -79,8 +78,10 @@ class ScoreKeeperFragment : Fragment(), MenuProvider {
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
         return when (menuItem.itemId) {
             R.id.action_history -> {
-                findNavController().navigate(NavGraphDirections.)
+                findNavController().navigate(NavGraphDirections.actionGlobalHistoryFragment())
+                true
             }
+            else -> false
         }
     }
 

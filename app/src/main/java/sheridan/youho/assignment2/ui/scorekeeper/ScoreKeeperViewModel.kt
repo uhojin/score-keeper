@@ -17,15 +17,15 @@ class ScoreKeeperViewModel() : ViewModel() {
         get() = _scoreData!!
 
     fun addScore(
-        team: Boolean,
+        team: Int,
         gainedScore: Int
     ) {
         val scoreData = scoreKeeper.addScore(gainedScore, team)
         val uiState = _liveUiState.value
-        _liveUiState.value = uiState?.copy(
-            addScore = scoreData.addedScore,
-            scoredTeam = scoreData.scoredTeam
-        )
+        //_liveUiState.value = uiState?.copy(
+        //    addScore = scoreData.addedScore,
+        //    scoredTeam = scoreData.scoredTeam
+        //)
         _scoreData = scoreData
     }
 }

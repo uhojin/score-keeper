@@ -6,6 +6,6 @@ data class ScoreData(
     val scoreTeamA: Int = 0,
     val scoreTeamB: Int = 0,
     val addedScore: Int,
-    val scoredTeam: Boolean,
+    val scoredTeam: Int,
     val date: Date = Date()
 )

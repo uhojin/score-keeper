@@ -11,5 +11,8 @@ interface ScoreDataRepository {
 
     suspend fun insertScoreData(scoreData: ScoreData)
 
-    // Add new functions here
+    suspend fun deleteScoreDataById(id: Int)
+
+    suspend fun deleteAllScoreData()
+
 }
