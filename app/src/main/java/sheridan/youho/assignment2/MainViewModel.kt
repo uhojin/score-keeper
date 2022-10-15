@@ -18,10 +18,6 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             repository.insertScoreData(scoreData)
         }
-    fun deleteScoreDateById(id: Int) =
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteScoreDataById(id)
-        }
     fun clearAllHistory() =
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAllScoreData()

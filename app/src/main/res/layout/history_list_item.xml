@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
         <variable
@@ -30,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="date and time" />
+                android:text="@string/date_and_time" />
         </LinearLayout>
 
         <TableLayout
@@ -50,7 +49,7 @@
                     android:id="@+id/team_a_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Team A: " />
+                    android:text="@string/history_team_a" />
 
                 <TextView
                     android:id="@+id/team_a_output"
@@ -58,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="0" />
+                    android:text="@string/_0" />
             </TableRow>
 
             <TableRow
@@ -71,14 +70,14 @@
                     android:id="@+id/team_b_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Team B: " />
+                    android:text="@string/history_team_b" />
 
                 <TextView
                     android:id="@+id/team_b_output"
                     scoreValue="@{itemUiState.scoreTeamB}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0" />
+                    android:text="@string/B_0" />
             </TableRow>
 
             <TableRow
@@ -90,7 +89,7 @@
                     android:id="@+id/scored_team_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Result:"
+                    android:text="@string/result"
                     android:textAlignment="center" />
 
                 <TextView
@@ -98,21 +97,22 @@
                     identifyTeam="@{itemUiState.teamScored}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A" />
+                    android:text="@string/scoring_team" />
 
                 <TextView
                     android:id="@+id/gained_score_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
-                    android:text="+" />
+                    android:layout_marginStart="0dp"
+                    android:text="@string/plus" />
 
                 <TextView
                     android:id="@+id/gained_score_output"
                     scoreValue="@{itemUiState.addedScore}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1" />
+                    android:text="@string/history_result_score"
+                    android:textStyle="bold" />
             </TableRow>
 
         </TableLayout>
