@@ -22,3 +22,10 @@ fun setDateAndTimeValues(textView: TextView, date: Date?) {
         textView.text = formatDateAndTime(date)
 }
 
+@BindingAdapter("scoreValue")
+fun setScoreValue(textView: TextView, score: Int?) {
+    if (score is Int) {
+        textView.text = formatScore(score)
+    }
+}
+

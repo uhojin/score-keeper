@@ -18,14 +18,41 @@ class ScoreKeeperViewModel() : ViewModel() {
 
     fun addScore(
         team: Int,
-        gainedScore: Int
+        gainedScore: Int,
+        aTeamScore: Int,
+        bTeamScore: Int
     ) {
-        val scoreData = scoreKeeper.addScore(gainedScore, team)
+        val scoreData = scoreKeeper.addScore(gainedScore, team, aTeamScore, bTeamScore)
         val uiState = _liveUiState.value
-        _liveUiState.value = uiState?.copy(
-            scoreA = scoreData.scoreTeamA,
-            scoreB = scoreData.scoreTeamB
-        )
+//        _liveUiState.value = uiState?.copy(
+//            scoreA = scoreData.scoreTeamA,
+//            scoreB = scoreData.scoreTeamB
+//        )
+        if (team == 0) {
+            if (gainedScore == 1){
+                _liveUiState.value = uiState?.copy(
+                    scoreA = aTeamScore + 1,
+                    scoreB = bTeamScore
+                )
+            } else {
+                _liveUiState.value = uiState?.copy(
+                    scoreA = aTeamScore + 2,
+                    scoreB = bTeamScore
+                )
+            }
+        } else {
+            if (gainedScore == 1){
+                _liveUiState.value = uiState?.copy(
+                    scoreA = aTeamScore,
+                    scoreB = bTeamScore + 1
+                )
+            } else {
+                _liveUiState.value = uiState?.copy(
+                    scoreA = aTeamScore,
+                    scoreB = bTeamScore + 2
+                )
+            }
+        }
         _scoreData = scoreData
     }
 }

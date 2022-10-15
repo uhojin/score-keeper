@@ -1,5 +1,7 @@
 package sheridan.youho.assignment2.ui
 
+import sheridan.youho.assignment2.model.ScoreData
+import java.text.NumberFormat
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -30,3 +32,5 @@ fun formatDateAndTime(date: Date): String =
         .atZone(ZoneId.systemDefault())
         .toLocalDateTime()
         .format(dateAndTimeFormatter)
+
+fun formatScore(score: Int) = NumberFormat.getIntegerInstance().format(score)

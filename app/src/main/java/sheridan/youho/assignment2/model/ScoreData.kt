@@ -3,8 +3,8 @@ import java.util.Date
 
 data class ScoreData(
     val id: Int = 0,
-    val scoreTeamA: Int = 0,
-    val scoreTeamB: Int = 0,
+    val scoreTeamA: Int,
+    val scoreTeamB: Int,
     val addedScore: Int,
     val scoredTeam: Int,
     val date: Date = Date()

@@ -41,20 +41,29 @@ class ScoreKeeperFragment : Fragment(), MenuProvider {
 
         // A Team Score Buttons
         binding.scoreAAdd1.setOnClickListener {
-            viewModel.addScore(0, 1)
+            // grab team a,b score from screen and give it to the function
+            val aTeamScore = binding.scoreA.text.toString().toInt()
+            val bTeamScore = binding.scoreB.text.toString().toInt()
+            viewModel.addScore(0, 1, aTeamScore,bTeamScore)
             mainViewModel.saveScoreData(viewModel.scoreData)
         }
         binding.scoreAAdd2.setOnClickListener {
-            viewModel.addScore(0, 2)
+            val aTeamScore = binding.scoreA.text.toString().toInt()
+            val bTeamScore = binding.scoreB.text.toString().toInt()
+            viewModel.addScore(0, 2, aTeamScore,bTeamScore)
             mainViewModel.saveScoreData(viewModel.scoreData)
         }
         // B Team Score Buttons
         binding.scoreBAdd1.setOnClickListener {
-            viewModel.addScore(1, 1)
+            val aTeamScore = binding.scoreA.text.toString().toInt()
+            val bTeamScore = binding.scoreB.text.toString().toInt()
+            viewModel.addScore(1, 1,aTeamScore,bTeamScore)
             mainViewModel.saveScoreData(viewModel.scoreData)
         }
         binding.scoreBAdd2.setOnClickListener {
-            viewModel.addScore(1, 2)
+            val aTeamScore = binding.scoreA.text.toString().toInt()
+            val bTeamScore = binding.scoreB.text.toString().toInt()
+            viewModel.addScore(1, 2,aTeamScore,bTeamScore)
             mainViewModel.saveScoreData(viewModel.scoreData)
         }
 
