@@ -2,6 +2,7 @@ package sheridan.youho.assignment2.ui
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
+import sheridan.youho.assignment2.R
 import java.util.Date
 
 @BindingAdapter("dateValue")
@@ -29,3 +30,11 @@ fun setScoreValue(textView: TextView, score: Int?) {
     }
 }
 
+@BindingAdapter("identifyTeam")
+fun identifyTeam(textView: TextView, value: Int?) {
+    if (value is Int) {
+        with(textView.resources) {
+            textView.text = if (value == 0) getString(R.string.A) else getString(R.string.B)
+        }
+    }
+}

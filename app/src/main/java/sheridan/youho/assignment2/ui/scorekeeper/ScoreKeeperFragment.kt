@@ -70,6 +70,9 @@ class ScoreKeeperFragment : Fragment(), MenuProvider {
 
         binding.resetButton.setOnClickListener {
             // Add reset logic
+            viewModel.resetScore()
+            mainViewModel.saveScoreData(viewModel.scoreData)
+            mainViewModel.clearAllHistory()
         }
 
         return binding.root

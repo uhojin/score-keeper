@@ -8,17 +8,17 @@
     <dialog
         android:id="@+id/aboutFragment"
         android:name="sheridan.youho.assignment2.ui.about.AboutFragment"
-        android:label="AboutFragment" />
+        android:label="About" />
     <action android:id="@+id/action_global_aboutFragment" app:destination="@id/aboutFragment" />
     <fragment
         android:id="@+id/historyFragment"
         android:name="sheridan.youho.assignment2.ui.history.HistoryFragment"
-        android:label="fragment_history"
+        android:label="Score History"
         tools:layout="@layout/fragment_history" />
     <action android:id="@+id/action_global_historyFragment" app:destination="@id/historyFragment" />
     <fragment
         android:id="@+id/scoreKeeperFragment"
         android:name="sheridan.youho.assignment2.ui.scorekeeper.ScoreKeeperFragment"
-        android:label="ScoreKeeperFragment"
+        android:label="Score Keeper"
         tools:layout="@layout/fragment_score_keeper" />
 </navigation>

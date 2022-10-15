@@ -7,5 +7,6 @@ data class HistoryItemUiState(
     val date:Date,
     val scoreTeamA: Int,
     val scoreTeamB: Int,
-    val addedScore: Int
+    val addedScore: Int,
+    val teamScored: Int
 )

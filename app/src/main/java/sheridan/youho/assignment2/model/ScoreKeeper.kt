@@ -7,6 +7,19 @@ class ScoreKeeper {
     private var scoreTeamB: Int = 0
 
 
+    fun resetScore(): ScoreData {
+        return resetScoreData()
+    }
+
+    private fun resetScoreData(): ScoreData {
+        return ScoreData(
+            scoredTeam = 0,
+            addedScore = 0,
+            scoreTeamA = 0,
+            scoreTeamB = 0
+        )
+    }
+
     fun addScore(
         addedScore: Int,
         scoredTeam: Int,

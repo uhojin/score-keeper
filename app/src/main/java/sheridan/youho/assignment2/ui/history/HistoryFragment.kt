@@ -7,11 +7,11 @@ import androidx.core.view.MenuProvider
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
-import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import sheridan.youho.assignment2.MainViewModel
 import sheridan.youho.assignment2.R
 import sheridan.youho.assignment2.databinding.FragmentHistoryBinding
+import sheridan.youho.assignment2.ui.scorekeeper.ScoreKeeperViewModel
 
 @AndroidEntryPoint
 class HistoryFragment : Fragment(), MenuProvider {
@@ -21,6 +21,7 @@ class HistoryFragment : Fragment(), MenuProvider {
 
     private val viewModel: HistoryViewModel by viewModels()
     private val mainViewModel: MainViewModel by activityViewModels()
+    //private val scoreKeeperViewModel: ScoreKeeperViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -62,6 +63,8 @@ class HistoryFragment : Fragment(), MenuProvider {
         return when (menuItem.itemId) {
             R.id.action_clear_all_history -> {
                 mainViewModel.clearAllHistory()
+                // Reset Score when history is cleared, does not work.
+                // scoreKeeperViewModel.resetScore()
                 true
             }
             else -> false

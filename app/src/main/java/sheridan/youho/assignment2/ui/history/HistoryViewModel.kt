@@ -23,7 +23,8 @@ class HistoryViewModel @Inject constructor(
                     date = scoreData.date,
                     scoreTeamA = scoreData.scoreTeamA,
                     scoreTeamB = scoreData.scoreTeamB,
-                    addedScore = scoreData.addedScore
+                    addedScore = scoreData.addedScore,
+                    teamScored = scoreData.scoredTeam
                 )
             }
         }.flowOn(Dispatchers.IO).asLiveData()

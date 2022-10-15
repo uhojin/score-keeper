@@ -19,6 +19,11 @@
             android:orientation="horizontal">
 
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
+
             <TextView
                 android:id="@+id/date_output"
                 dateAndTimeValues="@{itemUiState.date}"
@@ -49,6 +54,7 @@
 
                 <TextView
                     android:id="@+id/team_a_output"
+                    scoreValue="@{itemUiState.scoreTeamA}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -69,6 +75,7 @@
 
                 <TextView
                     android:id="@+id/team_b_output"
+                    scoreValue="@{itemUiState.scoreTeamB}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0" />
@@ -83,10 +90,12 @@
                     android:id="@+id/scored_team_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Result:" />
+                    android:text="Result:"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/scored_team_output"
+                    identifyTeam="@{itemUiState.teamScored}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="A" />
@@ -95,11 +104,12 @@
                     android:id="@+id/gained_score_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="0dp"
                     android:text="+" />
 
                 <TextView
                     android:id="@+id/gained_score_output"
+                    scoreValue="@{itemUiState.addedScore}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1" />
