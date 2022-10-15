@@ -19,5 +19,6 @@
     <fragment
         android:id="@+id/scoreKeeperFragment"
         android:name="sheridan.youho.assignment2.ui.scorekeeper.ScoreKeeperFragment"
-        android:label="ScoreKeeperFragment" />
+        android:label="ScoreKeeperFragment"
+        tools:layout="@layout/fragment_score_keeper" />
 </navigation>

@@ -18,7 +18,15 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             repository.insertScoreData(scoreData)
         }
-    // Could add delete and clear history
+    fun deleteScoreDateById(id: Int) =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteScoreDataById(id)
+        }
+    fun clearAllHistory() =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllScoreData()
+        }
+
     init {
         Log.d("DependencyInjection", "Created MainViewModel")
     }

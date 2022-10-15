@@ -22,10 +22,10 @@ class ScoreKeeperViewModel() : ViewModel() {
     ) {
         val scoreData = scoreKeeper.addScore(gainedScore, team)
         val uiState = _liveUiState.value
-        //_liveUiState.value = uiState?.copy(
-        //    addScore = scoreData.addedScore,
-        //    scoredTeam = scoreData.scoredTeam
-        //)
+        _liveUiState.value = uiState?.copy(
+            scoreA = scoreData.scoreTeamA,
+            scoreB = scoreData.scoreTeamB
+        )
         _scoreData = scoreData
     }
 }

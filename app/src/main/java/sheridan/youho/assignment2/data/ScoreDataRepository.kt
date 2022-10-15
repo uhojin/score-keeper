@@ -1,7 +1,9 @@
 package sheridan.youho.assignment2.data
 
+
 import sheridan.youho.assignment2.model.ScoreData
 import kotlinx.coroutines.flow.Flow
+
 
 interface ScoreDataRepository {
 
