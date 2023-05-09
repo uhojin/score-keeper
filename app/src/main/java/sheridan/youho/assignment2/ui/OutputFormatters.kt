@@ -26,7 +26,6 @@ fun formatTime(date: Date): String =
         .toLocalTime()
         .format(timeFormatter)
 
-
 fun formatDateAndTime(date: Date): String =
     date.toInstant()
         .atZone(ZoneId.systemDefault())

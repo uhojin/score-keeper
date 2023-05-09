@@ -77,6 +77,10 @@
                         android:layout_height="wrap_content"
                         android:text="+1"
                         tools:ignore="DuplicateSpeakableTextCheck" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
                 </TableRow>
 
                 <TableRow
@@ -91,10 +95,6 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
                 </TableRow>
             </TableLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
         </androidx.cardview.widget.CardView>
 
